@@ -1,0 +1,53 @@
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2.5rem;
+    box-shadow: 0 .3rem .6rem $header-shadow-color;
+
+    .logo {
+        font-size: 3.2rem;
+        line-height: 3.7rem;
+        color: $header-logo-color;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 300;
+    }
+
+    .hamburger {
+        font-size: 2rem;
+        font-weight: 300;
+        color: $header-hamburger-color;
+    }
+}
+
+nav {
+    position: absolute;
+    top: 15vh;
+    padding: 2rem 0;
+    display: none;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 .3rem .6rem $header-shadow-color;
+
+    @media (orientation: landscape) {
+        top: 25vh
+    }
+
+    ul {
+        list-style: none;
+
+        a {
+            font-size: 1.1rem;
+            line-height: 2.5rem;
+            font-weight: 700;
+            color: $header-navtext-color;
+            font-family: 'Open Sans', sans-serif;
+            text-transform: uppercase;
+
+            &:hover {
+                color: $header-navtexthover-color;
+            }
+        }
+    }
+}

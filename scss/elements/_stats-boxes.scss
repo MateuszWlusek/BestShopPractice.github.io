@@ -1,0 +1,78 @@
+.container.stats {
+    width: 80vw;
+    margin: 2rem auto;
+
+
+    h2 {
+        font-size: 3rem;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .box {
+        height: 25vh;
+        text-align: center;
+        margin: 2rem auto;
+
+        @media (orientation: landscape) {
+            height: 40vh;
+        }
+
+        i {
+            display: inline-block;
+            position: relative;
+            width: 6rem;
+            height: 6rem;
+            border-radius: 50%;
+            background-color: $stats-firstcircle-color;
+
+            &::before {
+                content: url(../img/Person.svg);
+                position: absolute;
+                left: 3rem;
+            }
+        }
+
+        &:nth-of-type(2) {
+            i {
+                background-color: $stats-secondcircle-color;
+
+                &::before {
+                    content: url(../img/Eye.svg);
+                    top: 1rem;
+                    left: 2rem;
+                }
+            }
+        }
+
+        &:last-of-type {
+            i {
+                background-color: $stats-thirdcircle-color;
+
+                &::before {
+                    content: url(../img/Catalog.svg);
+                    top: .5rem;
+                }
+            }
+        }
+
+        h3 {
+            font-size: 2rem;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            letter-spacing: .6rem;
+        }
+
+        p {
+            font-size: 1.7rem;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+            color: $stats-text-color;
+            display: inline-block;
+            width: 40%;
+            margin: 1.5rem 0;
+        }
+    }
+}

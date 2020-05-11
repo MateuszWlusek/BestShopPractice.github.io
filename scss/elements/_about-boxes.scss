@@ -1,0 +1,119 @@
+.container.about {
+    background-color: $about-bg-color;
+    padding: 4rem 3rem;
+
+    .about--box {
+        width: 100%;
+        background-color: $about-boxbg-color;
+        margin: 3rem auto;
+        border-radius: .5rem;
+        border: 1px solid $about-boxborder-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .about--image {
+            height: 15rem;
+            margin: 4rem auto 3rem auto;
+            text-align: center;
+            position: relative;
+
+            &::after {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                top: -1rem;
+                left: -1rem;
+                z-index: 1;
+                width: 10rem;
+                height: 10rem;
+                border-radius: 4.5rem;
+                background-color: $about-firstboximagebg-color;
+                transform: rotate(45deg);
+
+                @media (orientation: landscape) {
+                    left: 5rem;
+                }
+            }
+
+            img {
+                width: 18em;
+                position: absolute;
+                top: 1rem;
+                left: -10rem;
+                z-index: 2;
+
+                @media (orientation: landscape) {
+                    width: 25rem;
+                }
+            }
+        }
+
+        &:nth-of-type(2) {
+            .about--image {
+                &::after {
+                    content: "";
+                    display: inline-block;
+                    position: absolute;
+                    top: 0;
+                    left: -8rem;
+                    z-index: 1;
+                    width: 14rem;
+                    height: 14rem;
+                    border-radius: 50%;
+                    background-color: $about-secondboximagebg-color;
+                }
+
+                img {
+                    width: 18rem;
+                    left: -7rem;
+                }
+            }
+        }
+
+        &:last-of-type {
+            h2 {
+                margin-top: 3rem;
+            }
+
+            .about--image {
+                width: 100%;
+                height: 20rem;
+                background-color: $about-thirdboximagebg-color;
+                border-radius: .5rem;
+                margin-bottom: 0;
+
+                img {
+                    width: 30rem;
+                    top: 3rem;
+                    left: -2rem;
+
+                    @media (orientation: landscape) {
+                        left: 10rem;
+                    }
+                }
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+
+        .about--description {
+            margin: 1rem 2rem 4rem 2rem;
+
+            h2 {
+                font-size: 3rem;
+                font-family: 'Raleway', sans-serif;
+                font-weight: 400;
+                margin-bottom: 2rem;
+            }
+
+            p {
+                font-size: 1.4rem;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 400;
+            }
+        }
+    }
+}

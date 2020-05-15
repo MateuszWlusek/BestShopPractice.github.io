@@ -1,0 +1,141 @@
+.container.pricing {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 1.5rem;
+    width: 100%;
+
+    h2 {
+        font-size: 3.6rem;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
+        margin-top: 5rem;
+    }
+
+    .box--offer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 90%;
+        padding: 2rem .5rem 3rem .5rem;
+        border: 1px solid $pricing-firstOfferBorder-color;
+        border-radius: 1.8rem;
+        margin: 3rem auto 5rem auto;
+        position: relative;
+
+        .offerName {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem;
+
+            h3 {
+                font-size: 2rem;
+                color: $pricing-offerNameText-color;
+                font-family: 'Raleway', sans-serif;
+                font-weight: 700;
+            }
+
+            .price {
+                font-size: 4.6rem;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 300;
+                color: $pricing-firstOfferPriceText-color;
+            }
+
+            .limited {
+                font-size: 1.2rem;
+                font-family: 'Raleway', sans-serif;
+                font-weight: 700;
+                color: $pricing-offerLimitedText-color;
+            }
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+
+            li {
+                font-size: 1.4rem;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 400;
+                margin-bottom: 2rem;
+
+                img {
+                    width: 1rem;
+                    height: 1rem;
+                    border: 1px solid $pricing-offerTickBorder-color;
+                    border-radius: .1rem;
+                    margin-right: 1rem;
+                    padding: .1rem;
+                }
+
+                i {
+                    font-family: sans-serif;
+                    font-style: normal;
+                    text-transform: uppercase;
+                    display: inline-block;
+                    width: 1rem;
+                    height: 1rem;
+                    font-size: .9rem;
+                    line-height: .9rem;
+                    font-family: 'Raleway', sans-serif;
+                    text-align: center;
+                    font-weight: 700;
+                    padding: .1rem;
+                    margin-right: 1rem;
+                    color: $pricing-offerCrossText-color;
+                    border: 1px solid $pricing-offerCrossBorder-color;
+                    border-radius: .1rem;
+                }
+            }
+        }
+
+        button {
+            position: absolute;
+            bottom: -2.5rem;
+            left: calc(50% - 7.5rem);
+            font-size: 1.3rem;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            color: $pricing-buttonText-color;
+            background-color: $pricing-firstButtonBg-color;
+            display: inline-block;
+            width: 15rem;
+            height: 5rem;
+            text-align: center;
+            border-radius: 2.3rem;
+            border: none;
+        }
+
+        &:nth-of-type(2) {
+            border-color: $pricing-secondOfferBorder-color;
+            box-shadow: .5rem 1rem 2.7rem $pricing-secondOfferShadow-color;
+            width: 100%;
+
+            .price {
+                color: $pricing-secondOfferPriceText-color;
+            }
+
+            button {
+                background-color: $pricing-secondButtonBg-color;
+                box-shadow: .5rem 1rem 1.4rem $pricing-secondButtonShadow-color;
+            }
+        }
+
+        &:nth-of-type(3) {
+            border-color: $pricing-thirdOfferBorder-color;
+
+            .price {
+                color: $pricing-thirdOfferPriceText-color;
+            }
+
+            button {
+                background-color: $pricing-thirdButtonBg-color;
+            }
+        }
+    }
+}

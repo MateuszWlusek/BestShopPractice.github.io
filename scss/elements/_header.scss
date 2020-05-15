@@ -93,7 +93,7 @@ header {
         transition: .5s;
 
         @media (orientation: landscape) {
-            top: 15vh;
+            top: -50vh;
         }
 
         ul {
@@ -116,5 +116,9 @@ header {
 
     .show {
         top: 10vh;
+
+        @media (orientation: landscape) {
+            top: 15vh;
+        }
     }
 }
